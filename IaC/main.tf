@@ -65,8 +65,8 @@ resource "aws_ecs_service" "ecs-service" {
 
     network_configuration {
       assign_public_ip  = true
-      subnets           = [module.vpc.public_subnets[0]]
-      security_groups   = [module.container-security-group.security_group_id]
+      subnets          = [module.vpc.public_subnets[0]]                      
+      security_groups  = [module.container-security-group.security_group_id] 
     }
 
     health_check_grace_period_seconds = 0
@@ -76,6 +76,8 @@ resource "aws_ecs_service" "ecs-service" {
       container_name    = "${var.project_name}-${var.env}-con"
       container_port    = var.container_port
     }
+
+    
 
 }
 

@@ -8,7 +8,7 @@ module "vpc" {
 
   # Zonas de disponibilidade e subnets
   azs               = [var.avail_zone_1, var.avail_zone_2]
-  public_subnets    = [var.public_subnet_1_cidr_block, public_subtnet_2_cidr_block]
+  public_subnets    = [var.public_subnet_1_cidr_block, var.public_subnet_2_cidr_block]
   private_subnets   = [var.private_subnet_1_cidr_block]
 
   # Tag para cada recurso na VPC
